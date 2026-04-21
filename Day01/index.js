@@ -57,3 +57,48 @@ function fizzbuzz(){
 }
 
 //let display=fizzbuzz()
+
+async function daysWorked(date) {
+
+    const response = await fetch("https://calendrier.api.gouv.fr/jours-feries/metropole/2024.json");
+    const freeDay = await response.json();
+
+    const formatted = { year: 'numeric', month: 'long', day: 'numeric' };
+    const dateDisplayed = date.toLocaleDateString('fr-FR', formatted);
+
+    const isoDate = date.toISOString().split('T')[0];
+    const dayWeek = date.getDay();
+
+    if (freeDay[isoDate]) {
+        console.log(`Le ${dateDisplayed} is a free day (${freeDay[isoDate]})`);
+    } 
+    else if (dayWeek === 0 || dayWeek=== 6) {
+        console.log(`No, ${dateDisplayed} is a week-end`);
+    } 
+    else {
+        console.log(`Yes, ${dateDisplayed} is a work day`);
+    }
+}
+
+//daysWorked(new Date('2024-05-01')); 
+
+function isPrime(num) {
+    if (num <= 1) return false; 
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false; 
+    }
+    return true;
+}
+
+
+function sommeFirstNumbers(a, b) {
+    if (isPrime(a) && isPrime(b)) {
+        return a + b; 
+    } else {
+        console.log("One of the number is not prime");
+        return false;
+    }
+}
+
+let result = sommeFirstNumbers(39, 2); 
+console.log(result);
