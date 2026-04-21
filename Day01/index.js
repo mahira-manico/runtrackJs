@@ -35,9 +35,25 @@ function bisextile(year){
 
 function displayDayByWeek(){ 
     let daysWeek=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"] 
-    for(i=0;i<daysWeek.length;i++){  //use i to loop until the end of the list
+    for(let i=0;i<daysWeek.length;i++){  //use i to loop until the end of the list
         console.log(daysWeek[i]) //display each loop using i
     }
 }
 
 //let display=displayDayByWeek()
+
+function fizzbuzz(){
+   for(let i=1;i<152;i++){//display numbers first
+    if(i%3==0&&i%5==0){ //most uncommon condition first
+        console.log("FizzBuzz")
+    } else if(i%3==0){
+        console.log("Fizz")
+    } else if(i%5==0){
+        console.log("Buzz")
+    } else{
+        console.log(i)
+    }
+   }
+}
+
+//let display=fizzbuzz()
