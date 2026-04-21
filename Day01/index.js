@@ -17,3 +17,18 @@
 //console.log(`You are ${age} years old`);
 //console.log(`The price is ${price}$`);
 //console.log(`Your name is ${firstName}`);
+
+function bisextile(year){
+    if(year%400==0){ //check the most specific condition first
+        console.log(`${year} is bisextile`) 
+    } else if(year%100==0){
+        console.log(`${year} is not bisextile`)
+    } else if(year%4==0){
+        console.log(`${year} is bisextile`)
+    } else{
+        console.log(`${year} is not bisextile`)
+    }
+
+}
+
+let result=bisextile(2000);
