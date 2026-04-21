@@ -31,4 +31,13 @@ function bisextile(year){
 
 }
 
-let result=bisextile(2000);
+//let result=bisextile(2000);
+
+function displayDayByWeek(){ 
+    let daysWeek=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"] 
+    for(i=0;i<daysWeek.length;i++){  //use i to loop until the end of the list
+        console.log(daysWeek[i]) //display each loop using i
+    }
+}
+
+//let display=displayDayByWeek()
