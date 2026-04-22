@@ -29,6 +29,17 @@ textar.addEventListener("input", function double() {
     console.log(doubleTexte);
 });
 
+window.addEventListener("scroll", () => {
+
+    let scrollMax = document.body.scrollHeight - window.innerHeight;
+    let pourcentage = (window.scrollY / scrollMax) * 100;
+
+    let footer = document.querySelector("footer");
+    footer.style.backgroundColor = `hsl(${pourcentage * 1.2}, 70%, 50%)`;
+});
+
+
+
 
 
 
