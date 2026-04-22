@@ -1,4 +1,4 @@
-function citation(){
+/*function citation(){
     let word=document.getElementById("citation").textContent
     console.log(word)
 }
@@ -22,23 +22,33 @@ btn.addEventListener("click",function addOne(){
 
 });
 
-let textar = document.getElementById("keyloger");
-textar.addEventListener("input", function double() {
-    let ceQueJeTape = textar.value;
-    let doubleTexte = ceQueJeTape + ceQueJeTape;
-    console.log(doubleTexte);
-});
+//let textar = document.getElementById("keyloger");
+//textar.addEventListener("input", function double() {
+   // let ceQueJeTape = textar.value;
+   // let doubleTexte = ceQueJeTape + ceQueJeTape;
+   // console.log(doubleTexte);
+//});
 
-window.addEventListener("scroll", () => {
+//window.addEventListener("scroll", () => {
 
-    let scrollMax = document.body.scrollHeight - window.innerHeight;
-    let pourcentage = (window.scrollY / scrollMax) * 100;
+    //let scrollMax = document.body.scrollHeight - window.innerHeight;
+   // let pourcentage = (window.scrollY / scrollMax) * 100;
 
-    let footer = document.querySelector("footer");
-    footer.style.backgroundColor = `hsl(${pourcentage * 1.2}, 70%, 50%)`;
-});
+   // let footer = document.querySelector("footer");
+   // footer.style.backgroundColor = `hsl(${pourcentage * 1.2}, 70%, 50%)`;
+//});
+*/
 
-
+    let btn=document.getElementById("toggle-theme");
+    btn.addEventListener("click",function changeTheme(){
+        if(document.body.style.backgroundColor==="white"){
+            document.body.style.backgroundColor="black";
+            document.body.style.color="white";
+        } else{
+            document.body.style.backgroundColor="white";
+            document.body.style.color="black";
+     }
+    })
 
 
 
