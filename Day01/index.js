@@ -100,5 +100,33 @@ function sommeFirstNumbers(a, b) {
     }
 }
 
-let result = sommeFirstNumbers(39, 2); 
-console.log(result);
+//let result = sommeFirstNumbers(39, 2); 
+//console.log(result);
+
+function tri(numbers, order) {
+  // On boucle plusieurs fois pour être sûr que tout est trié
+  for (let j = 0; j < numbers.length; j++) {
+    
+    for (let i = 0; i < numbers.length - 1; i++) {
+      let doitEchanger = false;
+
+      // On vérifie le sens du tri avec ===
+      if (order === "asc") {
+        if (numbers[i] > numbers[i + 1]) doitEchanger = true;
+      } else if (order === "desc") {
+        if (numbers[i] < numbers[i + 1]) doitEchanger = true;
+      }
+
+      // Le système d'échange (Swap)
+      if (doitEchanger) {
+        let temp = numbers[i];      // On sauvegarde la valeur dans un "verre" temporaire
+        numbers[i] = numbers[i + 1]; // On remplace
+        numbers[i + 1] = temp;       // On remet la valeur sauvegardée
+      }
+    }
+  }
+  console.log(numbers);
+}
+
+let numbers = [1, 7, 2, 4, 5, 82, 1, 4, 65];
+tri(numbers, "desc");
