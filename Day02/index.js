@@ -22,3 +22,13 @@ btn.addEventListener("click",function addOne(){
 
 });
 
+let textar = document.getElementById("keyloger");
+textar.addEventListener("input", function double() {
+    let ceQueJeTape = textar.value;
+    let doubleTexte = ceQueJeTape + ceQueJeTape;
+    console.log(doubleTexte);
+});
+
+
+
+
